@@ -7,9 +7,8 @@
 
  E-mail: akmaralongarova96@gmail.com
 
-Github: [Makoni1][1]
+ Github: [Makoni1](https://github.com/Makoni1)
 
-[1]:https://github.com/Makoni1
 ---
 ## **About me**
 
