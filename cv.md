@@ -48,7 +48,8 @@ I plan to become a Frontend Developer who will offer improvements, highlight som
 
 * From 50 participants became one of the 30 who got certificate
 
-----
+---
+
  ## **Education**
  
 **Kazakh-British Technical University**
