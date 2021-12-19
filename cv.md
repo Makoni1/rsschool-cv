@@ -27,6 +27,7 @@ I plan to become a Frontend Developer who will offer improvements, highlight som
  * JavaScript
  * Git/Github
  * Vue.js
+
 ---
 ## **Sample code**
 
@@ -46,6 +47,7 @@ I plan to become a Frontend Developer who will offer improvements, highlight som
 *Kolesa Group, online course*
 
 * From 50 participants became one of the 30 who got certificate
+
 --- 
  ## **Education**
  
@@ -56,6 +58,7 @@ I plan to become a Frontend Developer who will offer improvements, highlight som
 * The one of the most prestigious university in Kazakhstan
 
 * Became one of the 30+ who got scholarship
+
 --- 
 
 ## **English level**
