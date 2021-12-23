@@ -8,44 +8,58 @@
     <title>Akmaral Ongarove - Junior Front-End Developer</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <img src="assets/svg/menu.svg" alt="bars">
-            </label>
-            <label class="logo">RS
-                <!-- <img src="assets/svg/rs_school_js.svg" alt="RS" weight="60px" height="60px"> -->
-            </label>
-            <ul>
-                <li><a class="active" href="#">About me</a></li>
-                <li><a href="#">Skills</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Languages</a></li>
-                <li><a href="#">Sample code</a></li>
-            </ul>
-        </nav>
-    </header> 
-    <main>
-        <section class="about-me"></section>
-        <section class="skills"></section>
-        <section class="projects"></section>
-        <section class="experience"></section>
-        <section class="facts"></section>
-        <section class="languages"></section>
-        <section class="education"></section>
-        <section class="code examples"></section>
-        <section class="video"></section>
-        <section class="contact me"></section>
-    </main>
-    <footer>
-        <div class="footer__copyright">
-            <p>© 2021 by Akmaral Ongarova</p>
-        </div>
-        <ul class="footer__contact-links"></ul>
-    </footer>
-
+    <div class="wrapper">
+        <header>
+            <nav>
+                <div class="flex">
+                    <input type="checkbox" id="check">
+                    <label class="logo">
+                        <img src="assets/img/logo.png" alt="Logo">
+                    </label>
+                    <ul>
+                        <li><a class="active" href="#">About me</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Education</a></li>
+                        <li><a href="#">Experience</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Languages</a></li>
+                        <li><a href="#">Sample code</a></li>
+                    </ul>
+                </div>
+                <label for="check" class="checkbtn">
+                    <img src="assets/svg/menu.svg" alt="bars">
+                </label>
+            </nav>
+        </header> 
+        <main>
+            <!-- <div class="main-wrapper"> -->
+                <section class="about-me container">
+                    <img class="about-me__img" src="./assets/img/avatar.jpg" alt="ava">
+                    <h1 class="about-me__text">Frontend Developer</h1>
+                    <div class="about-me__btn">
+                        <div class="btn__wrapper">
+                            <button class="about-me__email">Email me</button>
+                        </div>
+                        <button class="about-me__cv">Download CV</button>
+                    </div>
+                </section>
+                <section class="skills"></section>
+                <section class="projects"></section>
+                <section class="experience"></section>
+                <section class="facts"></section>
+                <section class="languages"></section>
+                <section class="education"></section>
+                <section class="code examples"></section>
+                <section class="video"></section>
+                <section class="contact me"></section>
+            <!-- </div> -->
+        </main>
+        <footer>
+            <div class="footer__copyright">
+                <p>© 2021 by Akmaral Ongarova</p>
+            </div>
+            <ul class="footer__contact-links"></ul>
+        </footer>
+    </div>
 </body>
 </html>

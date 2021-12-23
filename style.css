@@ -6,38 +6,37 @@
    box-sizing: border-box;
 }
 body{
+    height: 100%;
     font-family: montserrat;
+ 
+}
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 header{
-    width: 100%;
-    height: 20%;
-    background-color: pink;
+    padding: 0 40px;
+    background: #222930;
 }
 main{
-    width: 100%;
-    height: 60%;
-    background-color: blue;
-}
-footer{
-    width: 100%;
-    height: 60%;
-    background-color: rgb(47, 255, 92);
+    background: #222930;
+    flex: 1 0 auto;
 }
 nav{
-    background: #0082e6;
     height: 80px;
     width: 100%;
 }
-label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+.flex{
+    display: flex;
+}
+.logo {
+    height: 60px;
+    padding: 16px 0;
 }
 nav ul{
-    float: right;
-    margin-right: 20px;
+    display: inline;
+    margin-left: auto;
 }
 nav ul li{
     display: inline-block;
@@ -45,19 +44,19 @@ nav ul li{
     margin: 0 5px;
 }
 nav ul li a {
-    color: white;
+    color: #E9E9E9;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase ;
 }
 a.active,a:hover { 
-    background: #1b9bff;
+    background: #4EB1BA;
     transition: .5s;
 }
 .checkbtn{
     font-size: 30px;
-    color: white;
+    color: #E9E9E9;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -67,21 +66,97 @@ a.active,a:hover {
 #check{
     display: none;
 }
+.main-wrapper{
+    margin: 0 auto;
+}
+.about-me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    top: 50%; 
+}
+.about-me__img {
+    border-radius: 50%;
+}
+.about-me__text{
+    margin: 32px auto;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: #E9E9E9;
+}
+.about-me__btn {
+    display: flex;
+}
+.btn__wrapper {
+    transform: translate(-50%, -50%);
+}
+.about-me__email {
+    width: 200px;
+    height: 40px;
+    /* border-radius: 30px; */
+    line-height: 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-family: sans-serif;
+    color: #333;
+    border: 2px solid #333;
+    position: relative;
+    transition: all .35s;
+    /* position: relative;
+    z-index: 2; */
+}
+.about-me__email:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4EB1BA;
+    transition: all .35s;
+}
+  
+.about-me__email:hover{
+    color: #fff;
+}
+  
+.about-me__email:hover:after{
+width: 100%;
+}
+
+.about-me__cv{
+    width: 166px;
+    height: 48px;
+    border-radius: 30px;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+    background-color: #4EB1BA;
+}
+@media (max-width: 1600px) {
+    nav ul li a{
+        font-size: 14px;
+    }
+}
 @media (max-width: 1200px){
     nav ul li a{
-        font-size: 16px;
+        font-size: 14px;
     }
     label.logo {
         display: none;
     }
 }
 @media (max-width: 952px){
-    label.logo{
-        font-size: 30px;
-        padding-left: 50px;
-    }
     nav ul li a{
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 @media (max-width: 858px){
@@ -108,7 +183,7 @@ a.active,a:hover {
     }
     a:hover, a.active{
         background: none;
-        color: #0082e6;
+        color: #4EB1BA;
     }
     #check:checked ~ ul{
         left: 0;
