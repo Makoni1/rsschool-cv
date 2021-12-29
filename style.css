@@ -5,10 +5,23 @@
    list-style: none;
    box-sizing: border-box;
 }
+@font-face {
+	font-family: 'UbuntuMono-Regular';
+	src: url('./assets/fonts/UbuntuMono-Regular.eot');
+	src: local('☺'), url('./assets/fonts/UbuntuMono-Regular.woff') format('woff'), url('./assets/fonts/UbuntuMono-Regular.ttf') format('truetype'), url('./assets/fonts/UbuntuMono-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Righteous-Regular';
+	src: url('./assets/fonts/Righteous-Regular.eot');
+	src: local('☺'), url('./assets/fonts/Righteous-Regular.woff') format('woff'), url('./assets/fonts/Righteous-Regular.ttf') format('truetype'), url('./assets/fonts/Righteous-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 body{
     height: 100%;
     font-family: montserrat;
- 
 }
 .wrapper{
     display: flex;
@@ -16,7 +29,7 @@ body{
     min-height: 100vh;
 }
 header{
-    padding: 0 40px;
+    padding: 20px 40px;
     background: #222930;
 }
 main{
@@ -50,7 +63,7 @@ nav ul li a {
     border-radius: 3px;
     text-transform: uppercase ;
 }
-a.active,a:hover { 
+.navigation a.active, .navigation a:hover { 
     background: #4EB1BA;
     transition: .5s;
 }
@@ -76,6 +89,7 @@ a.active,a:hover {
     align-items: center;
     margin: 0 auto;
     top: 50%; 
+    position: relative;
 }
 .about-me__img {
     border-radius: 50%;
@@ -84,30 +98,52 @@ a.active,a:hover {
     margin: 32px auto;
     font-weight: 700;
     font-size: 64px;
+    font-family: 'Righteous-Regular';
     text-align: center;
-    color: #E9E9E9;
+    color: #4EB1BA;
 }
 .about-me__btn {
     display: flex;
+    gap: 50px;
 }
-.btn__wrapper {
-    transform: translate(-50%, -50%);
+.btn__wrapper span {
+    position: relative;
+    z-index: 2;
 }
 .about-me__email {
-    width: 200px;
-    height: 40px;
-    /* border-radius: 30px; */
+    display: block;
+    width: 190px;
+    height: 50px;
     line-height: 40px;
     font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background-color:  #222930;
+    border: 2px solid #fff;
     letter-spacing: 2px;
     text-align: center;
-    font-family: sans-serif;
-    color: #333;
-    border: 2px solid #333;
     position: relative;
     transition: all .35s;
-    /* position: relative;
-    z-index: 2; */
+    border-radius: 30px;
+}
+.about-me__cv {
+    display: block;
+    width: 190px;
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #fff;
+    background-color:  #222930;
+    border: 2px solid #fff;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all .35s;
+    border-radius: 30px;
+    padding: 0;
 }
 .about-me__email:after{
     position: absolute;
@@ -117,21 +153,42 @@ a.active,a:hover {
     width: 0;
     height: 100%;
     background: #4EB1BA;
+    border-radius: 30px;
     transition: all .35s;
 }
-  
+.about-me__cv:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #4EB1BA;
+    border-radius: 30px;
+    transition: all .35s;
+}
 .about-me__email:hover{
     color: #fff;
 }
-  
+.about-me__cv:hover{
+    color: #fff;
+}  
 .about-me__email:hover:after{
-width: 100%;
-}
-
-.about-me__cv{
-    width: 166px;
-    height: 48px;
+    width: 100%;
     border-radius: 30px;
+}
+.about-me__cv:hover:after{
+    width: 100%;
+    border-radius: 30px;
+}
+.about-me__desc {
+    font-size: 27px;
+    margin-top: 32px;
+    color: #E9E9E9;
+}
+.about-me__desc p{
+    margin-top: 5px;
+    font-family: 'UbuntuMono-Regular';
 }
 .container{
     max-width: 1440px;
@@ -141,9 +198,60 @@ footer {
     flex: 0 0 auto;
     background-color: #4EB1BA;
 }
+.github{
+    position: absolute;
+    top: calc(60% - 0rem);
+    right: 15rem;
+    animation: spin infinite 26s linear;
+}
+.linkedin{
+    position: absolute;
+    top: calc(60% - 0rem);
+    left: 15rem;
+    animation: spin infinite 28s linear;
+}
+.contact-links__item:hover{
+    transform: scale(1.25);
+}
+
+@keyframes spin{
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-250px) rotate(360deg);
+    }
+}
 @media (max-width: 1600px) {
     nav ul li a{
         font-size: 14px;
+    }
+    .about-me{
+        position: relative;
+    }
+    .github{
+        position: absolute;
+        top: calc(100% - 15rem);
+        right: 17rem;
+        animation: spin infinite 25s linear;
+    }
+    .linkedin{
+        position: absolute;
+        top: calc(100% - 15rem);
+        left: 17rem;
+        animation: spin infinite 23s linear;
+    }
+    .about-me__desc {
+        font-size: 24px;
+        margin-top: 28px;
+    }
+    @keyframes spin{
+        0%, 100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-250px) rotate(360deg);
+        }
     }
 }
 @media (max-width: 1200px){
@@ -152,6 +260,23 @@ footer {
     }
     label.logo {
         display: none;
+    }
+    .about-me__text {
+        margin: 30px auto;
+        font-weight: 700;
+        font-size: 60px;
+    }
+    .about-me__cv {
+        width: 170px;
+        height: 50px;
+        line-height: 46px;
+        font-size: 18px;
+    }
+    .about-me__email{
+        width: 170px;
+        height: 50px;
+        line-height: 46px;
+        font-size: 18px;
     }
 }
 @media (max-width: 952px){
@@ -189,8 +314,3 @@ footer {
         left: 0;
     }
 }
-/* section{
-    background: url(./assets/img/sea.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-} */
