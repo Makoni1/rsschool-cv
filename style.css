@@ -19,22 +19,34 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Roboto-Regular';
+	src: url('./assets/fonts/Roboto-Regular.eot');
+	src: local('☺'), url('./assets/fonts/Roboto-Regular.woff') format('woff'), url('./assets/fonts/Roboto-Regular.ttf') format('truetype'), url('./assets/fonts/Roboto-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 body{
     height: 100%;
-    font-family: montserrat;
+    background: #222930;
 }
 .wrapper{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 header{
     padding: 20px 40px;
-    background: #222930;
 }
 main{
-    background: #222930;
     flex: 1 0 auto;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
 }
 nav{
     height: 80px;
@@ -87,9 +99,9 @@ nav ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     top: 50%; 
     position: relative;
+    margin-bottom: 60px;
 }
 .about-me__img {
     border-radius: 50%;
@@ -190,13 +202,18 @@ nav ul li a {
     margin-top: 5px;
     font-family: 'UbuntuMono-Regular';
 }
-.container{
-    max-width: 1440px;
-    margin: 0 auto;
-}
 footer {
     flex: 0 0 auto;
-    background-color: #4EB1BA;
+    margin: 0 auto;
+    min-height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer__copyright {
+    font-family: 'UbuntuMono-Regular';
+    font-size: 24px;
+    color: #E9E9E9;
 }
 .github{
     position: absolute;
@@ -213,7 +230,37 @@ footer {
 .contact-links__item:hover{
     transform: scale(1.25);
 }
-
+.skills{
+    margin-bottom: 60px;
+}
+.skills__title{
+    font-family: 'Roboto-Regular';
+    font-size: 36px;
+    color: #E9E9E9;
+}
+.skill{
+    font-family: 'Roboto-Regular';
+    font-size: 20px;
+    color: #E9E9E9;
+}
+.experience{
+    margin-bottom: 60px;
+}
+.experience-title{
+    font-family: 'Roboto-Regular';
+    font-size: 24px;
+    color: #66cc99;
+}
+.time{
+    font-family: 'Roboto-Regular';
+    font-size: 20px;
+    color: #E9E9E9;
+}
+.company-description{
+    font-family: 'Roboto-Regular';
+    font-size: 18px;
+    color: #E9E9E9;
+}
 @keyframes spin{
     0%, 100% {
       transform: translateY(0) rotate(0deg);
