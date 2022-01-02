@@ -39,7 +39,7 @@ body{
     margin: 0 auto;
 }
 header{
-    padding: 20px 40px;
+    padding: 20px 80px;
 }
 main{
     flex: 1 0 auto;
@@ -102,6 +102,7 @@ nav ul li a {
     top: 50%; 
     position: relative;
     margin-bottom: 60px;
+    padding: 20px 80px;
 }
 .about-me__img {
     border-radius: 50%;
@@ -208,13 +209,13 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 40px
+    padding: 20px 80px;
 }
 .footer__copyright {
     font-family: 'UbuntuMono-Regular';
     font-size: 24px;
     color: #E9E9E9;
-    margin-right: 100px;
+    margin-right: 400px;
 }
 .footer-links__item{
     font-family: 'UbuntuMono-Regular';
@@ -242,6 +243,7 @@ footer {
 }
 .skills{
     margin-bottom: 60px;
+    padding: 20px 80px;
 }
 .skills__title{
     font-family: 'Roboto-Regular';
@@ -272,6 +274,7 @@ footer {
 .experience{
     margin-bottom: 60px;
     font-family: 'UbuntuMono-Regular';
+    padding: 20px 80px;
 }
 .experience-content{
     font-size: 30px;
@@ -313,6 +316,7 @@ hr{
 .education{
     margin-bottom: 60px;
     font-family: 'UbuntuMono-Regular';
+    padding: 20px 80px;
 }
 .education__title{
     font-family: 'Roboto-Regular';
