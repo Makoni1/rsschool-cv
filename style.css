@@ -355,6 +355,52 @@ hr{
 .footer__wrapper{
     display: flex;
 }
+.languages__columns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.languages{
+    padding: 20px 80px;
+    margin-bottom: 60px;
+}
+.language__column{
+    flex: 25%;
+}
+.language__content{
+    font-family: 'Roboto-Regular';
+    font-size: 30px;
+    color: #E9E9E9;
+    margin-bottom: 15px;
+}
+.language__degree{
+    font-family: 'Roboto-Regular';
+    font-size: 26px;
+    color: #E9E9E9;
+}
+.languages__title{
+    font-family: 'Roboto-Regular';
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #66cc99;
+}
+.code__examples{
+    margin-bottom: 60px;
+    font-family: 'UbuntuMono-Regular';
+    padding: 20px 80px;
+}
+.code__title{
+    font-family: 'Roboto-Regular';
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #66cc99;
+}
+.code{
+    font-family: 'Roboto-Regular';
+    font-size: 26px;
+    color: #E9E9E9;
+}
 @keyframes spin{
     0%, 100% {
         transform: translateY(0) rotate(0deg);

@@ -23,7 +23,7 @@
                         <li><a href="#experience">Experience</a></li>
                         <li><a href="#education">Education</a></li>
                         <li><a href="#languages">Languages</a></li>
-                        <li><a href="#sample code">Sample code</a></li>
+                        <li><a href="#sample-code">Sample code</a></li>
                     </ul>
                 </div>
                 <label for="check" class="checkbtn">
@@ -155,7 +155,27 @@
                 <hr>
             </section>
             <section class="facts"></section>
-            <section class="languages"></section>
+            <section class="languages">
+                <h2 id="languages" class="languages__title">Languages</h2>
+                <div class="languages__columns">
+                    <div class="language__column">
+                       <p class="language__content">English</p> 
+                       <p class="language__degree">Fluent</p>
+                    </div>
+                    <div class="language__column">
+                        <p class="language__content">Russian</p> 
+                        <p class="language__degree">Native</p>
+                    </div>
+                    <div class="language__column">
+                        <p class="language__content">Kazakh</p> 
+                        <p class="language__degree">Native</p>
+                    </div>
+                    <div class="language__column">
+                        <p class="language__content">French</p> 
+                        <p class="language__degree">Beginner</p>
+                    </div>
+                </div>
+            </section>
             <section class="education">
                 <h2 id="education" class="education__title">Education and courses</h2> 
                 <div class="education__wrapper">
@@ -180,9 +200,25 @@
                 </div>
                 <hr>
             </section>
-            <section class="code examples"></section>
-            <section class="video"></section>
-            <section class="contact me"></section>
+            <section class="code__examples">
+                <h2 id="sample-code" class="code__title">Code examples</h2> 
+                <pre>
+                    <code class="code">
+                    const bubbleSort = (arr) => {
+                        for (let i = 0; i < arr.length; i++) {
+                            for (let j = 0; j < arr.length - 1; j++) {
+                                if (arr[j] > arr[j + 1]) {
+                                    let temp = arr[j];
+                                    arr[j] = arr[j + 1];
+                                    arr[j + 1] = temp;
+                                }
+                            }
+                        }
+                        return arr;
+                    }
+                    </code>
+                </pre>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer__wrapper">
