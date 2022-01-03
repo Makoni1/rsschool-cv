@@ -401,6 +401,47 @@ hr{
     font-size: 26px;
     color: #E9E9E9;
 }
+.projects{
+    margin-bottom: 60px;
+    font-family: 'UbuntuMono-Regular';
+    padding: 20px 80px;
+}
+.project__content{
+   margin-right: 200px;
+}
+.projects__box{
+    display: flex;
+}
+.projects__title{
+    font-family: 'Roboto-Regular';
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #66cc99;
+}
+.projects__subtitle{
+    margin-top: 20px;
+}
+.project__content-text{
+    font-family: 'Roboto-Regular';
+    font-size: 20px;
+}
+.kolesa-img{
+    width: 400px;
+    height: 300px;
+}
+.project__content-desc{
+    flex-wrap: wrap;
+}
+.projects__subtitle {
+    font-family: 'Roboto-Regular';
+    font-size: 30px;
+    color: #E9E9E9;
+}
+.projects__desc{
+    font-family: 'Roboto-Regular';
+    font-size: 30px;
+    color: #E9E9E9;
+}
 @keyframes spin{
     0%, 100% {
         transform: translateY(0) rotate(0deg);
