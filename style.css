@@ -406,11 +406,35 @@ hr{
     font-family: 'UbuntuMono-Regular';
     padding: 20px 80px;
 }
+.projects__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 .project__content{
    margin-right: 200px;
 }
-.projects__box{
+.projects__card{
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    background-color: #ffffff;
+    max-width: 400px;
+    height: 343px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.projects__card-img{
+    border-radius: 20px 20px 0 0;
+    width: 400px;
+}
+.projects__card2-img{
+    border-radius: 20px 20px 0 0;
+    width: 400px;
 }
 .projects__title{
     font-family: 'Roboto-Regular';
@@ -418,16 +442,25 @@ hr{
     margin-bottom: 25px;
     color: #66cc99;
 }
-.projects__subtitle{
+.projects__content h3{
     margin-top: 20px;
+    font-weight: 600;
+    font-weight: 600;
+    font-size: 32px;
+    color: #000008;
+    text-align: center;
+}
+.projects__content p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 32px;
+    color: #000008;
+    text-align: center;
 }
 .project__content-text{
     font-family: 'Roboto-Regular';
     font-size: 20px;
-}
-.kolesa-img{
-    width: 400px;
-    height: 300px;
 }
 .project__content-desc{
     flex-wrap: wrap;
@@ -441,6 +474,42 @@ hr{
     font-family: 'Roboto-Regular';
     font-size: 30px;
     color: #E9E9E9;
+}
+.card__layer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #4EB1BA;
+    color: #000000;
+    font-weight: 400;
+    position: absolute;
+    height: inherit;
+    border-radius: inherit;
+    width: 400px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all 0.5s ease;
+    padding: 20px;
+}
+.card__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+.card__layer:hover{
+    opacity: 1;
+    visibility: visible;
+    padding: 20px;
+}
+.card__list li{
+    list-style: inside;
+    line-height: 150%;
+}
+.card__text p{
+    margin-bottom: 30px;
 }
 @keyframes spin{
     0%, 100% {
