@@ -49,8 +49,7 @@ main{
     flex: 1 0 auto;
 }
 .container{
-    max-width: 1440px;
-    margin: 0 auto;
+    padding: 100px;
 }
 nav{
     height: 80px;
@@ -106,7 +105,6 @@ nav ul li a {
     align-items: center;
     top: 50%; 
     position: relative;
-    padding: 100px 100px;
 }
 .about-me__img {
     border-radius: 50%;
@@ -215,8 +213,6 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px 80px;
-    background-color: #243646
 }
 .footer__copyright {
     width: 100%;
@@ -249,10 +245,9 @@ footer {
     transform: scale(1.25);
 }
 .skills{
-    padding: 100px;
     background-color: #243646;
 }
-.skills__title{
+.title{
     font-family: 'Roboto-Regular';
     font-size: 36px;
     color: #E9E9E9;
@@ -281,18 +276,10 @@ footer {
 }
 .experience{
     font-family: 'Roboto-Regular';
-    padding: 100px;
     background-color: #243646
 }
 .experience-content{
     font-size: 30px;
-    color: #66cc99;
-}
-.experience__title{
-    font-family: 'Roboto-Regular';
-    font-size: 36px;
-    color: #E9E9E9;
-    margin-bottom: 25px;
     color: #66cc99;
 }
 .time{
@@ -327,15 +314,7 @@ hr{
 }
 .education{
     font-family: 'Roboto-Regular';
-    padding: 100px;
     background-color: #243646
-}
-.education__title{
-    font-family: 'Roboto-Regular';
-    font-size: 36px;
-    color: #E9E9E9;
-    margin-bottom: 25px;
-    color: #66cc99;
 }
 .education__wrapper{
     display: flex;
@@ -377,9 +356,6 @@ hr{
     flex-wrap: wrap;
     width: 100%;
 }
-.languages{
-    padding: 100px;
-}
 .language__column{
     flex: 25%;
 }
@@ -394,21 +370,8 @@ hr{
     font-size: 26px;
     color: #E9E9E9;
 }
-.languages__title{
-    font-family: 'Roboto-Regular';
-    font-size: 36px;
-    margin-bottom: 25px;
-    color: #66cc99;
-}
 .code__examples{
     font-family: 'UbuntuMono-Regular';
-    padding: 100px;
-}
-.code__title{
-    font-family: 'Roboto-Regular';
-    font-size: 36px;
-    margin-bottom: 25px;
-    color: #66cc99;
 }
 .javascript{
     font-family: 'Roboto-Regular';
@@ -417,7 +380,6 @@ hr{
 }
 .projects{
     font-family: 'Roboto-Regular';
-    padding: 100px;
 }
 .projects__container{
     display: flex;
@@ -448,12 +410,6 @@ hr{
 .projects__card2-img{
     border-radius: 20px 20px 0 0;
     width: 400px;
-}
-.projects__title{
-    font-family: 'Roboto-Regular';
-    font-size: 36px;
-    margin-bottom: 25px;
-    color: #66cc99;
 }
 .projects__content h3{
     margin-top: 20px;
@@ -533,6 +489,9 @@ hr{
     }
 }
 @media (max-width: 1600px) {
+    .container{
+        padding: 80px;
+    }
     nav ul li a{
         font-size: 14px;
     }
@@ -555,6 +514,10 @@ hr{
         font-size: 24px;
         margin-top: 28px;
     }
+    .title{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
     @keyframes spin{
         0%, 100% {
           transform: translateY(0) rotate(0deg);
@@ -565,6 +528,9 @@ hr{
     }
 }
 @media (max-width: 1200px){
+    .container{
+        padding: 70px;
+    }
     nav ul li a{
         font-size: 14px;
     }
@@ -594,6 +560,10 @@ hr{
     }
 }
 @media (max-width: 952px){
+    .title{
+        font-size: 30px;
+        margin-bottom: 18px;
+    }
     nav ul li a{
         font-size: 12px;
     }
@@ -603,6 +573,9 @@ hr{
     }
 }
 @media (max-width: 858px){
+    .container{
+        padding: 60px;
+    }
     .education__wrapper {
         font-size: 18px;
         flex-wrap: wrap;
@@ -650,6 +623,13 @@ hr{
     }
 }
 @media (max-width: 600px){
+    .container{
+        padding: 40px;
+    }
+    .title{
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
     .footer__wrapper {
         display: flex;
         flex-direction: column;
