@@ -5,6 +5,9 @@
    list-style: none;
    box-sizing: border-box;
 }
+html {
+    Scroll-behavior: smooth;
+}
 @font-face {
 	font-family: 'UbuntuMono-Regular';
 	src: url('./assets/fonts/UbuntuMono-Regular.eot');
@@ -39,7 +42,8 @@ body{
     margin: 0 auto;
 }
 header{
-    padding: 20px 80px;
+    padding: 20px 100px;
+    background-color: #243646
 }
 main{
     flex: 1 0 auto;
@@ -70,6 +74,7 @@ nav ul li{
 }
 nav ul li a {
     color: #E9E9E9;
+    font-family: 'Roboto-Regular';
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
@@ -101,8 +106,7 @@ nav ul li a {
     align-items: center;
     top: 50%; 
     position: relative;
-    margin-bottom: 60px;
-    padding: 20px 80px;
+    padding: 100px 100px;
 }
 .about-me__img {
     border-radius: 50%;
@@ -126,8 +130,7 @@ nav ul li a {
 .about-me__email {
     display: block;
     width: 190px;
-    height: 50px;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 18px;
     font-family: sans-serif;
     text-decoration: none;
@@ -139,6 +142,7 @@ nav ul li a {
     position: relative;
     transition: all .35s;
     border-radius: 30px;
+    overflow: hidden;
 }
 .about-me__cv {
     display: block;
@@ -156,6 +160,7 @@ nav ul li a {
     transition: all .35s;
     border-radius: 30px;
     padding: 0;
+    overflow: hidden;
 }
 .about-me__email:after{
     position: absolute;
@@ -167,6 +172,7 @@ nav ul li a {
     background: #4EB1BA;
     border-radius: 30px;
     transition: all .35s;
+    overflow: hidden;
 }
 .about-me__cv:after{
     position: absolute;
@@ -178,6 +184,7 @@ nav ul li a {
     background: #4EB1BA;
     border-radius: 30px;
     transition: all .35s;
+    overflow: hidden;
 }
 .about-me__email:hover{
     color: #fff;
@@ -209,6 +216,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     padding: 20px 80px;
+    background-color: #243646
 }
 .footer__copyright {
     width: 100%;
@@ -241,8 +249,8 @@ footer {
     transform: scale(1.25);
 }
 .skills{
-    margin-bottom: 60px;
-    padding: 20px 80px;
+    padding: 100px;
+    background-color: #243646;
 }
 .skills__title{
     font-family: 'Roboto-Regular';
@@ -253,7 +261,7 @@ footer {
 }
 .skills__frame{
     width: 460px;
-    background-color: #222930;
+    background-color: #243646;
     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     padding: 50px;
@@ -271,9 +279,9 @@ footer {
     margin-right: 10px;
 }
 .experience{
-    margin-bottom: 60px;
-    font-family: 'UbuntuMono-Regular';
-    padding: 20px 80px;
+    font-family: 'Roboto-Regular';
+    padding: 100px;
+    background-color: #243646
 }
 .experience-content{
     font-size: 30px;
@@ -317,9 +325,9 @@ hr{
     margin-top: 15px;
 }
 .education{
-    margin-bottom: 60px;
-    font-family: 'UbuntuMono-Regular';
-    padding: 20px 80px;
+    font-family: 'Roboto-Regular';
+    padding: 100px;
+    background-color: #243646
 }
 .education__title{
     font-family: 'Roboto-Regular';
@@ -369,12 +377,10 @@ hr{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
     width: 100%;
 }
 .languages{
-    padding: 20px 80px;
-    margin-bottom: 60px;
+    padding: 100px;
 }
 .language__column{
     flex: 25%;
@@ -397,9 +403,8 @@ hr{
     color: #66cc99;
 }
 .code__examples{
-    margin-bottom: 60px;
     font-family: 'UbuntuMono-Regular';
-    padding: 20px 80px;
+    padding: 100px;
 }
 .code__title{
     font-family: 'Roboto-Regular';
@@ -413,9 +418,8 @@ hr{
     color: #E9E9E9;
 }
 .projects{
-    margin-bottom: 60px;
-    font-family: 'UbuntuMono-Regular';
-    padding: 20px 80px;
+    font-family: 'Roboto-Regular';
+    padding: 100px;
 }
 .projects__container{
     display: flex;
