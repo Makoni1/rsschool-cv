@@ -43,7 +43,8 @@ body{
 }
 header{
     padding: 20px 100px;
-    background-color: #243646
+    background-color: #243646;
+    z-index: 3;
 }
 main{
     flex: 1 0 auto;
@@ -88,7 +89,6 @@ nav ul li a {
     color: #E9E9E9;
     float: right;
     line-height: 80px;
-    margin-right: 40px;
     cursor: pointer;
     display: none;
 }
@@ -109,6 +109,14 @@ nav ul li a {
 .about-me__img {
     border-radius: 50%;
 }
+.about-me__name{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 44px;
+    font-family: 'UbuntuMono-Regular';
+    text-align: center;
+    color: #4EB1BA;
+}
 .about-me__text{
     margin: 32px auto;
     font-weight: 700;
@@ -119,6 +127,8 @@ nav ul li a {
 }
 .about-me__btn {
     display: flex;
+    justify-content: center;
+    flex-direction: row;
     gap: 50px;
 }
 .btn__wrapper span {
@@ -204,7 +214,7 @@ nav ul li a {
     color: #E9E9E9;
 }
 .about-me__desc p{
-    margin-top: 5px;
+    margin-bottom: 5px;
     font-family: 'UbuntuMono-Regular';
 }
 footer {
@@ -229,16 +239,24 @@ footer {
 .contact-links__link{
     color: #E9E9E9;
 }
+.contact-links__link:hover{
+    color: #4EB1BA;
+}
+.contact-links__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .github{
     position: absolute;
     top: calc(60% - 0rem);
-    right: 15rem;
+    right: 28rem;
     animation: spin infinite 26s linear;
 }
 .linkedin{
     position: absolute;
     top: calc(60% - 0rem);
-    left: 15rem;
+    left: 28rem;
     animation: spin infinite 28s linear;
 }
 .contact-links__item:hover{
@@ -252,7 +270,7 @@ footer {
     font-size: 36px;
     color: #E9E9E9;
     margin-bottom: 25px;
-    color: #66cc99;
+    color: #4EB1BA;
 }
 .skills__frame{
     max-width: 460px;
@@ -266,7 +284,7 @@ footer {
     display: flex;
     margin-bottom: 15px;
 }
-.skill{
+.skills__list-item p {
     font-family: 'Roboto-Regular';
     font-size: 24px;
     color: #E9E9E9;
@@ -280,14 +298,14 @@ footer {
 }
 .experience-content{
     font-size: 30px;
-    color: #66cc99;
+    color: #4EB1BA;
 }
 .time{
     font-size: 26px;
     color: #E9E9E9;
 }
 .company-description{
-    font-size: 24px;
+    font-size: 26px;
     color: #E9E9E9;
     margin-bottom: 40px;
 }
@@ -381,12 +399,6 @@ hr{
 .projects{
     font-family: 'Roboto-Regular';
 }
-.projects__container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-}
 .project__content{
    margin-right: 200px;
 }
@@ -394,42 +406,57 @@ hr{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
     border-radius: 20px;
-    background-color: #ffffff;
-    max-width: 400px;
-    height: 343px;
+    background-color: #fff;
+    margin: auto;
+    width: 70%;
     overflow: hidden;
     margin-bottom: 30px;
+    position: relative;
 }
 .projects__card-img{
     border-radius: 20px 20px 0 0;
-    width: 400px;
+    width: 100%;
 }
 .projects__card2-img{
     border-radius: 20px 20px 0 0;
-    width: 400px;
+    width: 100%;
+}
+.projects__content{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 20px;
+    font-weight: 600;
+    font-size: 45px;
+}
+.project__content-btn{
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: #fff;
+    background-color: #4EB1BA;
+    border: 2px solid #fff;
+    font-family: 'UbuntuMono-Regular';
+    text-align: center;
+    cursor: pointer;
+    padding: 2rem 1.5rem;
 }
 .projects__content h3{
-    margin-top: 20px;
-    font-weight: 600;
-    font-weight: 600;
-    font-size: 32px;
     color: #000008;
     text-align: center;
 }
 .projects__content p{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: 400;
-    font-size: 32px;
     color: #000008;
     text-align: center;
 }
 .project__content-text{
     font-family: 'Roboto-Regular';
     font-size: 20px;
+}
+.project__btn-text{
+    color: #fff;
 }
 .project__content-desc{
     flex-wrap: wrap;
@@ -453,32 +480,34 @@ hr{
     color: #000000;
     font-weight: 400;
     position: absolute;
-    height: inherit;
-    border-radius: inherit;
-    width: 400px;
-    font-size: 20px;
+    border-radius: 20px;
     letter-spacing: 2px;
     opacity: 0;
     transition: all 0.5s ease;
-    padding: 20px;
+    width: 100%;
+    height: inherit;
+    overflow: hidden;
 }
 .card__text{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    margin: 10px;
 }
 .card__layer:hover{
     opacity: 1;
     visibility: visible;
-    padding: 20px;
 }
 .card__list li{
     list-style: inside;
     line-height: 150%;
 }
 .card__text p{
-    margin-bottom: 30px;
+    font-size: 46px;
+}
+.card__text ul{
+    font-size: 40px;
 }
 @keyframes spin{
     0%, 100% {
@@ -490,33 +519,68 @@ hr{
 }
 @media (max-width: 1600px) {
     .container{
-        padding: 80px;
+        padding: 70px;
     }
     nav ul li a{
         font-size: 14px;
     }
+    .about-me__name{
+        margin-top: 20px;
+        font-size: 40px;
+    }
     .about-me{
         position: relative;
     }
+    .about-me__img {
+        width: 200px;
+    }
     .github{
         position: absolute;
-        top: calc(100% - 15rem);
-        right: 17rem;
+        top: calc(100% - 25rem);
+        right: 16rem;
         animation: spin infinite 25s linear;
     }
     .linkedin{
         position: absolute;
-        top: calc(100% - 15rem);
-        left: 17rem;
+        top: calc(100% - 25rem);
+        left: 16rem;
         animation: spin infinite 23s linear;
     }
     .about-me__desc {
         font-size: 24px;
-        margin-top: 28px;
+        margin-top: 30px;
     }
     .title{
         font-size: 32px;
         margin-bottom: 20px;
+    }
+    .experience-content {
+        font-size: 26px;
+    }
+    .time {
+        font-size: 24px;
+    }
+    .company-description {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+    .skills__list-item p {
+        font-size: 22px;
+    }
+    .card__text p{
+        font-size: 40px;
+    }
+    .card__text ul{
+        font-size: 30px;
+    }
+    .projects__content{
+        font-size: 40px;
+    }
+    .javascript{
+        font-size: 24px;
+    }
+    .project__content-btn{
+        font-size: 36px; 
     }
     @keyframes spin{
         0%, 100% {
@@ -529,13 +593,23 @@ hr{
 }
 @media (max-width: 1200px){
     .container{
-        padding: 70px;
+        padding: 65px;
     }
     nav ul li a{
         font-size: 14px;
     }
+    .experience-content {
+        font-size: 26px;
+    }
+    .time {
+        font-size: 24px;
+    }
     label.logo {
         display: none;
+    }
+    .about-me__name{
+        margin-top: 20px;
+        font-size: 36px;
     }
     .about-me__text {
         margin: 30px auto;
@@ -544,37 +618,169 @@ hr{
     }
     .about-me__cv {
         width: 170px;
-        height: 50px;
-        line-height: 46px;
-        font-size: 18px;
+        line-height: 40px;
+        font-size: 16px;
     }
     .about-me__email{
         width: 170px;
-        height: 50px;
-        line-height: 46px;
-        font-size: 18px;
+        line-height: 40px;
+        font-size: 16px;
+    }
+    .about-me__desc {
+        font-size: 20px;
+        margin-top: 30px;
     }
     .education__wrapper {
         font-size: 22px;
         gap: 18px;
     }
-}
-@media (max-width: 952px){
+    .github{
+        position: absolute;
+        top: calc(100% - 19rem);
+        right: 12rem;
+        animation: spin infinite 25s linear;
+    }
+    .linkedin{
+        position: absolute;
+        top: calc(100% - 19rem);
+        left: 12rem;
+        animation: spin infinite 23s linear;
+    }
+    .experience-content {
+        font-size: 26px;
+    }
+    .time {
+        font-size: 24px;
+    }
+    .company-description {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
     .title{
         font-size: 30px;
         margin-bottom: 18px;
     }
+    .skills__list-item p {
+        font-size: 20px;
+    }
+    .card__text p{
+        font-size: 30px;
+    }
+    .card__text ul{
+        font-size: 20px;
+    }
+    .projects__content{
+        font-size: 35px;
+    }
+    .javascript{
+        font-size: 22px;
+    }
+    .project__content-btn{
+        font-size: 34px; 
+    }
+}
+@media (max-width: 952px){
+    .container{
+        padding: 60px;
+    }
+    .title{
+        font-size: 28px;
+        margin-bottom: 16px;
+    }
+    .skills__list-item p {
+        font-size: 18px;
+    }
     nav ul li a{
         font-size: 12px;
+    }
+    .about-me__img {
+        width: 150px;
+    }
+    .about-me__name{
+        margin-top: 20px;
+        font-size: 34px;
+    }
+    .about-me__text {
+        font-weight: 700;
+        font-size: 52px;
     }
     .education__wrapper {
         font-size: 20px;
         gap: 18px;
     }
+    .contact-links__items{
+        margin-top: 30px;
+        gap: 265px;
+    }
+    .github{
+        position: relative;
+        animation: none;
+    }
+    .linkedin{
+        position: relative;
+        animation: none;
+    }
+    .language__content {
+        font-family: 'Roboto-Regular';
+        font-size: 24px;
+        color: #E9E9E9;
+        margin-bottom: 15px;
+    }
+    .language__degree{
+        font-family: 'Roboto-Regular';
+        font-size: 20px;
+        color: #E9E9E9;
+    }
+    .about-me__cv {
+        width: 150px;
+        line-height: 36px;
+        font-size: 16px;
+    }
+    .about-me__email{
+        width: 150px;
+        line-height: 36px;
+        font-size: 16px;
+    }
+    .about-me__desc {
+        font-size: 22px;
+    }
+    .card__text p{
+        font-size: 18px;
+    }
+    .card__text ul{
+        font-size: 16px;
+    }
+    .projects__content{
+        font-size: 24px;
+    }
+    .experience-content {
+        font-size: 24px;
+    }
+    .time {
+        font-size: 22px;
+    }
+    .company-description {
+        font-size: 22px;
+        margin-bottom: 6px;
+    }
+    .javascript{
+        font-size: 18px;
+    }
+    .project__content-btn{
+        padding: 1rem 1.5rem;
+        font-size: 28px; 
+    }
 }
 @media (max-width: 858px){
     .container{
         padding: 60px;
+    }
+    .title{
+        font-size: 26px;
+        margin-bottom: 14px;
+    }
+    .skills__list-item p {
+        font-size: 18px;
     }
     .education__wrapper {
         font-size: 18px;
@@ -609,6 +815,23 @@ hr{
     #check:checked ~ ul{
         left: 0;
     }
+    .about-me__name{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    .about-me__desc {
+        font-size: 20px;
+    }
+    .experience-content {
+        font-size: 22px;
+    }
+    .time {
+        font-size: 20px;
+    }
+    .company-description {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
     .footer__wrapper {
         display: flex;
         flex-direction: column;
@@ -621,14 +844,46 @@ hr{
     .footer__contact-links li{
         font-size: 20px;
     }
+    .projects__content{
+        font-size: 20px;
+    }
+    .javascript{
+        font-size: 16px;
+    }
+    .project__content-btn {
+        padding: 1rem 1.5rem;
+        font-size: 26px;
+    }
 }
 @media (max-width: 600px){
+    .about-me__name{
+        margin-top: 20px;
+        font-size: 26px;
+    }
+    .about-me__desc {
+        font-size: 18px;
+    }
+    .about-me__img {
+        width: 120px;
+    }
+    .about-me__text {
+        margin: 20px auto;
+        font-weight: 600;
+        font-size: 38px;
+    }
+    header {
+        padding: 20px 20px;
+        background-color: #243646;
+    }
     .container{
         padding: 40px;
     }
     .title{
-        font-size: 28px;
-        margin-bottom: 16px;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    .skills__list-item p {
+        font-size: 16px;
     }
     .footer__wrapper {
         display: flex;
@@ -636,4 +891,103 @@ hr{
         text-align: center;
         gap: 12px;
     }
+    .language__content {
+        font-family: 'Roboto-Regular';
+        font-size: 20px;
+        color: #E9E9E9;
+        margin-bottom: 3px;
+    }
+    .language__degree{
+        font-family: 'Roboto-Regular';
+        font-size: 16px;
+        color: #E9E9E9;
+        margin-bottom: 10px;
+    }
+    .about-me__btn {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    .card__text p{
+        font-size: 20px;
+    }
+    .card__text ul{
+        font-size: 12px;
+    }
+    .projects__content{
+        font-size: 20px;
+    }
+    .projects__card{
+        width: 86%;
+    }
+    .experience-content {
+        font-size: 20px;
+    }
+    .time {
+        font-size: 18px;
+    }
+    .company-description {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    .javascript{
+        font-size: 14px;
+    }
+    .footer__copyright {
+        font-size: 18px;
+    }
+    .footer__contact-links li {
+        font-size: 18px;
+    }
+    .projects__content{
+        font-size: 18px;
+    }
+    .project__content-btn {
+        font-size: 20px;
+        padding: 1rem 1.5rem;
+    }
 }
+@media (max-width: 500px) {
+    .container{
+        padding: 20px;
+    }
+    .javascript{
+        font-size: 9px;
+    }
+    .projects__content {
+        font-size: 16px;
+    }
+    .project__content-btn {
+        font-size: 14px;
+        padding: 1rem 0.5rem;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 320px) {
+    .container{
+        padding: 10px;
+    }
+    .javascript{
+        font-size: 9px;
+    }
+    .skills__frame {
+        width: 90%;
+        padding: 26px;
+    }
+    .about-me__text {
+        margin: 16px auto;
+        font-size: 32px;
+    }
+    .projects__content {
+        font-size: 14px;
+        padding: 12px;
+    }
+    .project__content-btn {
+        font-size: 14px;
+        padding: 1rem 1.5rem;
+        border-radius: 10px
+    }
+}
+
