@@ -12,10 +12,8 @@
 ---
 ## **About me**
 
-My name is Akmaral, I am a beginner front-end developer.
+My name is Akmaral, I am a Frontend Developer.
 I passionate about web development and design. 
-
-I have no experience in IT, but I have an analytical mindset. I can think in terms of business, beacuse I studied and worked in the field of finance and business. 
 
 I plan to become a Frontend Developer who will offer improvements, highlight some omissions, and not just code. The goal is to improve the quality of life of people through the creation of technological solutions.
 
@@ -26,7 +24,7 @@ I plan to become a Frontend Developer who will offer improvements, highlight som
  * CSS
  * JavaScript
  * Git/Github
- * Vue.js
+ * React.js
 
 ---
 ## **Sample code**
@@ -64,6 +62,6 @@ I plan to become a Frontend Developer who will offer improvements, highlight som
 
 ## **English level**
 
-* B2
+* C1
 
 
