@@ -747,14 +747,14 @@ hr{
         margin-top: 30px;
         gap: 265px;
     }
-    .github{
+    /* .github{
         position: relative;
         animation: none;
     }
     .linkedin{
         position: relative;
         animation: none;
-    }
+    } */
     .language__content {
         font-family: 'Roboto-Regular';
         font-size: 24px;
